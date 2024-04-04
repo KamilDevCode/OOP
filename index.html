@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="counter-1"></div>
+    <div class="counter-2"></div>
+
+    
+
+    <script src="./script.js"></script>
+    <!-- <script src="./Header.js"></script> -->
+     <!-- <script src="./Button.js"></script> -->
+    <!-- <script src="./counter.js"></script> -->
+    <!-- <script src="./DecreasingCounter.js"></script> -->
+   
+    <script>
+        /*
+         makeButtons()  wszystkie przycisk beda wyswietlaty obiekt window b wywołalismy funkcje w scope globalnym a this w scope globallnym odnosi sie do obiektu window
+
+            makeButtons.call({})
+            funkcja wywoła się z przypisanym kontekstem do nowo utworzonego obiektu pstego obiektu w związku z tym ze jest to deklaracja funkcji to mozemy przypisac nowy kontekst , gdyby była to funkcja strzałkowoa mogllibysmy użyć call apply i bind ale kontest by sie nie zmienił 
+        **/
+            
+
+             const counter1 = new Counter('.counter-1')
+             counter1.init()
+             const counter2 = new DecreasingCounter('.counter-2')
+             counter2.init()
+    </script>
+</body>
+</html>
