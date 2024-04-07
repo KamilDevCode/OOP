@@ -86,3 +86,34 @@ console.log(counter1.inc()) //ƒ ();
 console.log(counter1.inc()) //ƒ ();
 console.log(counter1.inc()) //ƒ ();
 console.log(counter1) //Counter {number: 4}
+
+
+// inheritance: extend and super:
+
+class Person1 {
+    constructor(name, lastName) {
+        this.name = name
+        this.lastName = lastName
+    }
+    sayHello() {
+        console.log(`Hello ${this.name}`)
+    }
+}
+
+class Employee extends Person {
+    constructor(name, lastName, position) {
+        super(name, lastName)
+        this.position = position
+    }
+    sayPosition() {
+        console.log(`I am ${this.position}`)
+    }
+}
+
+
+const employee = new Employee('Kamil', 'Lewandowski', 'developer')
+employee.sayHello()
+employee.sayPosition()
+
+console.log(employee) //Employee {name: 'Kamil', lastName: 'Lewandowski', position: 'developer'}
+
